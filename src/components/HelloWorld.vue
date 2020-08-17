@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ t('hello') }}</h1>
+    <h2>{{ upperMessage }}</h2>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -127,12 +128,24 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  setup(props) {
+    const { t } = useI18n()
+    const upperMessage = computed(() => {
+      return (props.msg ?? '').toUpperCase()
+    })
+
+    return {
+      upperMessage,
+      t
+    }
   }
 })
 </script>
