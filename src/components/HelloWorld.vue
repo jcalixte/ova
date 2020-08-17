@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ t('hello') }}</h1>
-    <h2>{{ upperMessage }}</h2>
+    <h1 class="title is-1">{{ t('hello') }}</h1>
+    <h2 class="subtitle is-2">{{ upperMessage }}</h2>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -9,7 +9,7 @@
         >vue-cli documentation</a
       >.
     </p>
-    <h3>Installed CLI Plugins</h3>
+    <h3 class="title is-3">Installed CLI Plugins</h3>
     <ul>
       <li>
         <a
@@ -68,7 +68,7 @@
         >
       </li>
     </ul>
-    <h3>Essential Links</h3>
+    <h3 class="title is-3">Essential Links</h3>
     <ul>
       <li>
         <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
@@ -92,7 +92,7 @@
         <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
       </li>
     </ul>
-    <h3>Ecosystem</h3>
+    <h3 class="title is-3">Ecosystem</h3>
     <ul>
       <li>
         <a href="https://router.vuejs.org" target="_blank" rel="noopener"
