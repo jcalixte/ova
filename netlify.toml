@@ -1,4 +1,4 @@
-[[build]]
+[build]
   publish = "dist"
   command = "yarn build --modern"
 
