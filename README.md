@@ -1,6 +1,6 @@
 # OVA — Offline VueJS App
 
-<samp>Opinionated Offline First VueJS 2 App Template </samp>
+<samp>Opinionated Offline First VueJS 3 App Template </samp>
 
 ## Features
 
