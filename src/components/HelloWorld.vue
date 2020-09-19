@@ -133,14 +133,19 @@
       </li>
     </ul>
   </div>
+  <FooterTranslation class="footer-translation" />
 </template>
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import FooterTranslation from '@/components/FooterTranslation.vue'
 
 export default defineComponent({
   name: 'HelloWorld',
+  components: {
+    FooterTranslation
+  },
   props: {
     msg: String
   },
@@ -172,5 +177,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.footer-translation {
+  margin-top: 1rem;
 }
 </style>
