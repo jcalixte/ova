@@ -68,6 +68,14 @@
         >
       </li>
     </ul>
+    <h3 class="title is-3">Installed command</h3>
+    <ul>
+      <li>
+        <code>yarn pwa:asset</code> (or <code>npm run pwa:asset</code>) creates
+        all the assets for the PWA asset. Just change the logo.svg in the img
+        folder and let the magic do the rest.
+      </li>
+    </ul>
     <h3 class="title is-3">Essential Links</h3>
     <ul>
       <li>
