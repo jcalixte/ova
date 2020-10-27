@@ -8,7 +8,9 @@ interface GetAllParams {
 }
 
 class Data {
-  private locale = new PouchDb()
+  private locale = new PouchDb('local-db', {
+    adapter: 'indexeddb'
+  })
 
   public async add(model: Model): Promise<boolean> {
     try {
