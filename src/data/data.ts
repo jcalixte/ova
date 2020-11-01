@@ -1,6 +1,7 @@
 import PouchDb from 'pouchdb-browser'
 import { Model } from './models/Model'
 import indexedDb from 'pouchdb-adapter-indexeddb'
+import { DataType } from './DataType.enum'
 
 PouchDb.plugin(indexedDb)
 
@@ -15,7 +16,7 @@ class Data {
     adapter: 'indexeddb'
   })
 
-  public async add(model: Model): Promise<boolean> {
+  public async add<DT extends DataType>(model: Model<DT>): Promise<boolean> {
     try {
       const result = await this.locale.put(model)
       return result.ok
@@ -40,7 +41,9 @@ class Data {
     }
   }
 
-  public async get<T extends Model>(id: string): Promise<T | null> {
+  public async get<DT extends DataType, T extends Model<DT>>(
+    id: string
+  ): Promise<T | null> {
     try {
       return ((await this.locale.get(id)) as T) || null
     } catch {
@@ -48,7 +51,7 @@ class Data {
     }
   }
 
-  public async getAll<T extends Model>({
+  public async getAll<DT extends DataType, T extends Model<DT>>({
     prefix,
     includeDocs = true,
     includeAttachments = false
