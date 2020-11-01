@@ -31,11 +31,11 @@ class Data {
       if (!doc) {
         return false
       }
-      const result = await this.locale.put({
+      const { ok } = await this.locale.put({
         ...doc,
         _deleted: true
       })
-      return result.ok
+      return ok
     } catch {
       return false
     }
