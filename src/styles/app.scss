@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import '~bulma/bulma.sass';
 
+html,
 body {
   text-align: center;
+  min-height: 100vh;
 }
