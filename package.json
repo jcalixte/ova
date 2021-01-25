@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "pwa:asset": "npx vue-pwa-asset-generator -a public/img/logo.svg -o public/img/icons"
+    "pwa:asset": "npx vue-pwa-asset-generator -a public/img/logo.svg"
   },
   "dependencies": {
     "bulma": "^0.9.1",
